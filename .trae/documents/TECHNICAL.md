@@ -26,36 +26,37 @@
 
 ## 2. 技术选型
 
-| 技术 | 版本 | 说明 |
-|------|------|------|
-| Vue | 3.x | 前端框架 |
-| Vite | 5.x | 构建工具 |
-| Naive UI | 2.x | UI组件库 |
-| Vue Router | 4.x | 路由管理 |
-| Pinia | 2.x | 状态管理 |
-| Tailwind CSS | 3.x | 样式方案 |
-| Axios | 1.x | 网络请求 |
-| marked | 11.x | Markdown解析 |
-| highlight.js | 11.x | 代码高亮 |
-| wow.js | 1.x | 滚动动画 |
-| animate.css | 4.x | 动画样式 |
+| 技术           | 版本   | 说明         |
+| ------------ | ---- | ---------- |
+| Vue          | 3.x  | 前端框架       |
+| Vite         | 5.x  | 构建工具       |
+| Naive UI     | 2.x  | UI组件库      |
+| Vue Router   | 4.x  | 路由管理       |
+| Pinia        | 2.x  | 状态管理       |
+| Tailwind CSS | 3.x  | 样式方案       |
+| Axios        | 1.x  | 网络请求       |
+| marked       | 11.x | Markdown解析 |
+| highlight.js | 11.x | 代码高亮       |
+| wow\.js      | 1.x  | 滚动动画       |
+| animate.css  | 4.x  | 动画样式       |
 
 ## 3. 路由定义
 
-| 路由 | 页面 | 描述 |
-|------|------|------|
-| / | HomeView | 首页 |
-| /articles | ArticleListView | 文章列表 |
+| 路由           | 页面                | 描述   |
+| ------------ | ----------------- | ---- |
+| /            | HomeView          | 首页   |
+| /articles    | ArticleListView   | 文章列表 |
 | /article/:id | ArticleDetailView | 文章详情 |
-| /timeline | TimelineView | 时间线 |
-| /gallery | GalleryView | 相册 |
-| /guestbook | GuestbookView | 留言板 |
-| /links | LinksView | 友情链接 |
-| /about | AboutView | 关于本站 |
+| /timeline    | TimelineView      | 时间线  |
+| /gallery     | GalleryView       | 相册   |
+| /guestbook   | GuestbookView     | 留言板  |
+| /links       | LinksView         | 友情链接 |
+| /about       | AboutView         | 关于本站 |
 
 ## 4. 状态管理
 
 ### 4.1 Theme Store
+
 ```javascript
 {
   isDark: Boolean,        // 是否深色模式
@@ -65,6 +66,7 @@
 ```
 
 ### 4.2 App Store
+
 ```javascript
 {
   wallPaper: String,           // 当前壁纸URL
@@ -110,16 +112,16 @@ views/
 
 `src/data/mockData.js` 包含：
 
-| 数据项 | 说明 |
-|--------|------|
-| articles | 文章列表（10-15篇） |
-| categories | 分类列表 |
-| tags | 标签列表 |
-| siteStats | 站点统计数据 |
-| messages | 留言列表 |
-| photos | 相册数据 |
-| links | 友链数据 |
-| profile | 个人简介 |
+| 数据项        | 说明           |
+| ---------- | ------------ |
+| articles   | 文章列表（10-15篇） |
+| categories | 分类列表         |
+| tags       | 标签列表         |
+| siteStats  | 站点统计数据       |
+| messages   | 留言列表         |
+| photos     | 相册数据         |
+| links      | 友链数据         |
+| profile    | 个人简介         |
 
 ## 8. 全局样式规范
 
@@ -145,13 +147,13 @@ views/
 
 ### 8.2 动画类名
 
-| 类名 | 动画效果 |
-|------|----------|
-| wow fadeIn | 淡入 |
-| wow fadeInUp | 向上淡入 |
-| wow fadeInLeft | 向左淡入 |
+| 类名              | 动画效果 |
+| --------------- | ---- |
+| wow fadeIn      | 淡入   |
+| wow fadeInUp    | 向上淡入 |
+| wow fadeInLeft  | 向左淡入 |
 | wow fadeInRight | 向右淡入 |
-| wow zoomIn | 缩放淡入 |
+| wow zoomIn      | 缩放淡入 |
 
 ## 9. 依赖安装命令
 
@@ -164,8 +166,13 @@ npm install -D vite-plugin-windicss windicss
 
 ## 10. 构建与部署
 
-- 开发命令: `npm run dev`
-- 构建命令: `npm run build`
-- 预览命令: `npm run preview`
-- 产物目录: `dist/`
-- 部署平台: Netlify、GitHub Pages、Vercel 等静态托管服务
+* 开发命令: `npm run dev`
+
+* 构建命令: `npm run build`
+
+* 预览命令: `npm run preview`
+
+* 产物目录: `dist/`
+
+* 部署平台: Netlify、GitHub Pages、Vercel 等静态托管服务
+

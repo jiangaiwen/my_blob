@@ -1,7 +1,5 @@
 <template>
   <div class="article-detail-view container mx-auto px-4 py-8">
-    <BreadCrumb :items="[{ name: '文章', path: '/articles' }, { name: article?.title }]" />
-
     <article v-if="article" class="max-w-4xl mx-auto">
       <!-- Cover -->
       <div class="relative h-64 md:h-80 rounded-xl overflow-hidden mb-8 wow fadeIn">
@@ -114,7 +112,8 @@ import hljs from 'highlight.js'
 import { NTag, NButton, NIcon, NAvatar, NInput, useMessage } from 'naive-ui'
 import { Calendar, Eye, Heart, Share, ChatboxEllipses } from '@vicons/ionicons5'
 import { articles, categories, tags } from '@/data/mockData'
-import BreadCrumb from '@/components/common/BreadCrumb.vue'
+import { useWow } from '@/composables/useWow'
+useWow() // 直接调用即可
 
 const route = useRoute()
 const message = useMessage()
@@ -177,8 +176,6 @@ const submitComment = () => {
 }
 
 onMounted(() => {
-  if (window.WOW) {
-    new WOW({ mobile: true, live: false }).init()
-  }
+
 })
 </script>

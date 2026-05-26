@@ -3,7 +3,7 @@
     <button
       v-show="show"
       @click="scrollToTop"
-      class="fixed bottom-8 right-8 w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-primary/20 transition-all z-50 shadow-lg"
+      class="fixed bottom-15 right-8 w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-primary/20 transition-all z-50 shadow-lg"
     >
       <n-icon size="24">
         <ArrowUp />
@@ -52,5 +52,9 @@ onUnmounted(() => {
 .slide-fade-leave-to {
   transform: translateY(20px);
   opacity: 0;
+}
+
+.bottom-15 {
+  bottom: 6rem;
 }
 </style>

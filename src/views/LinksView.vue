@@ -1,7 +1,5 @@
 <template>
   <div class="links-view container mx-auto px-4 py-8">
-    <BreadCrumb :items="[{ name: '友情链接' }]" />
-
     <!-- Header -->
     <div class="text-center mb-8">
       <h1 class="text-3xl font-bold mb-4 wow fadeIn">
@@ -68,11 +66,9 @@
 import { onMounted } from 'vue'
 import { NAvatar, NInput, NButton } from 'naive-ui'
 import { links } from '@/data/mockData'
-import BreadCrumb from '@/components/common/BreadCrumb.vue'
-
+import { useWow } from '@/composables/useWow'
+useWow() // 直接调用即可
 onMounted(() => {
-  if (window.WOW) {
-    new WOW({ mobile: true, live: false }).init()
-  }
+
 })
 </script>

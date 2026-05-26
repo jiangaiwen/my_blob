@@ -4,6 +4,7 @@ import naive from 'naive-ui'
 import App from './App.vue'
 import router from './router'
 import './assets/styles/global.css'
+import 'animate.css'
 
 const app = createApp(App)
 

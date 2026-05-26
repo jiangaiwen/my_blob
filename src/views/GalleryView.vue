@@ -1,19 +1,24 @@
 <template>
   <div class="gallery-view container mx-auto px-4 py-8">
-    <BreadCrumb :items="[{ name: '相册' }]" />
-
-    <!-- Header -->
-    <div class="text-center mb-8">
-      <h1 class="text-3xl font-bold mb-4 wow fadeIn">
-        <span class="gradient-text">光影集</span>
-      </h1>
-      <p class="wow fadeInUp" style="color: var(--text-secondary)">
-        用镜头捕捉生活的美好瞬间
-      </p>
+    <div class="relative w-full h-[120px] rounded-[20px] overflow-hidden mb-8 wow animate__fadeInUp">
+      <video
+        class="w-full h-full object-cover"
+        autoplay
+        loop
+        muted
+        playsinline
+        src="/video/q.mp4"
+      />
+      <div style="position: absolute; left: 20px; top: 15px;color: #fff;">
+        <div style="margin: 10px;">
+            <div> 时光相册 </div>
+            <div style="font-size: 20px; font-weight: bold; line-height: 1.5; margin-top: 20px;"> 用镜头捕捉生活的美好瞬间 </div>
+        </div>
+      </div>
     </div>
 
     <!-- Category Filter -->
-    <div class="flex flex-wrap justify-center gap-2 mb-8 wow fadeInUp">
+    <div class="flex flex-wrap justify-center gap-2 mb-8 wow animate__fadeInUp">
       <n-tag
         v-for="cat in photoCategories"
         :key="cat"
@@ -31,7 +36,7 @@
       <div
         v-for="(photo, index) in filteredPhotos"
         :key="photo.id"
-        class="photo-item relative rounded-xl overflow-hidden cursor-pointer group wow zoomIn"
+        class="photo-item relative rounded-xl overflow-hidden cursor-pointer group wow animate__fadeInUp"
         :style="{ animationDelay: `${index * 0.05}s` }"
         @click="openPreview(photo)"
       >
@@ -65,7 +70,8 @@
 import { ref, computed, onMounted } from 'vue'
 import { NTag, NModal } from 'naive-ui'
 import { photos } from '@/data/mockData'
-import BreadCrumb from '@/components/common/BreadCrumb.vue'
+import { useWow } from '@/composables/useWow'
+useWow() // 直接调用即可
 
 const selectedCategory = ref('全部')
 const showPreview = ref(false)

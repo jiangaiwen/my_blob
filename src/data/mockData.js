@@ -335,7 +335,7 @@ const [users, posts] = await Promise.all([
 2. 正确处理错误
 3. 避免回调地狱
 4. 合理使用 Promise.all`,
-    cover: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80',
+    cover: 'https://images.unsplash.com/photo-15584949494949-ef010cbdcc31?w=800&q=80',
     category: 2,
     tags: [2, 4],
     views: 1892,
@@ -629,18 +629,30 @@ export const messages = [
 
 // 相册数据
 export const photos = [
-  { id: 1, url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600', title: '秋日森林', category: '自然' },
-  { id: 2, url: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600', title: '咖啡时光', category: '生活' },
-  { id: 3, url: 'https://images.unsplash.com/photo-1476231682828-37e571bc172f?w=600', title: '雨后山林', category: '自然' },
-  { id: 4, url: 'https://images.unsplash.com/photo-1532767153582-b1a0e5145009?w=600', title: '月光', category: '自然' },
-  { id: 5, url: 'https://images.unsplash.com/photo-1537531383496-f4749b8032cf?w=600', title: '江南水乡', category: '旅行' },
-  { id: 6, url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600', title: '北疆秋色', category: '旅行' },
-  { id: 7, url: 'https://images.unsplash.com/photo-1544716278-ca5e235f7b2d?w=600', title: '读书时光', category: '生活' },
-  { id: 8, url: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600', title: '设计灵感', category: '工作' },
-  { id: 9, url: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600', title: '代码世界', category: '工作' },
-  { id: 10, url: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600', title: '服务器', category: '工作' },
-  { id: 11, url: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600', title: '数据流', category: '技术' },
-  { id: 12, url: 'https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=600', title: '创意设计', category: '工作' }
+  { id: 1, url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800', title: '秋日森林', category: '自然', height: 800 },
+  { id: 2, url: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=600', title: '咖啡时光', category: '生活', height: 600 },
+  { id: 3, url: 'https://images.unsplash.com/photo-1476231682828-37e571bc172f?w=600&h=900', title: '雨后山林', category: '自然', height: 900 },
+  { id: 4, url: 'https://images.unsplash.com/photo-1532767153582-b1a0e5145009?w=600&h=500', title: '月光', category: '自然', height: 500 },
+  { id: 5, url: 'https://images.unsplash.com/photo-1537531383496-f4749b8032cf?w=600&h=700', title: '江南水乡', category: '旅行', height: 700 },
+  { id: 6, url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=850', title: '北疆秋色', category: '旅行', height: 850 },
+  { id: 7, url: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=550', title: '读书时光', category: '生活', height: 550 },
+  { id: 8, url: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=750', title: '设计灵感', category: '工作', height: 750 },
+  { id: 9, url: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=650', title: '代码世界', category: '工作', height: 650 },
+  { id: 10, url: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=950', title: '服务器', category: '工作', height: 950 },
+  { id: 11, url: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=580', title: '数据流', category: '技术', height: 580 },
+  { id: 12, url: 'https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=600&h=720', title: '创意设计', category: '工作', height: 720 },
+  { id: 13, url: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=680', title: '晨雾', category: '自然', height: 680 },
+  { id: 14, url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=820', title: '金色胡杨', category: '旅行', height: 820 },
+  { id: 15, url: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=600&h=530', title: '城市夜景', category: '生活', height: 530 },
+  { id: 16, url: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=780', title: '山间小路', category: '旅行', height: 780 },
+  { id: 17, url: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=620', title: '海边日落', category: '旅行', height: 620 },
+  { id: 18, url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=880', title: '热带海滩', category: '旅行', height: 880 },
+  { id: 19, url: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&h=560', title: '山川云海', category: '自然', height: 560 },
+  { id: 20, url: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&h=740', title: '森林小屋', category: '生活', height: 740 },
+  { id: 21, url: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&h=660', title: '古镇街巷', category: '旅行', height: 660 },
+  { id: 22, url: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&h=920', title: '雪山倒影', category: '自然', height: 920 },
+  { id: 23, url: 'https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=600&h=590', title: '咖啡馆角落', category: '生活', height: 590 },
+  { id: 24, url: 'https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&h=810', title: '星空银河', category: '自然', height: 810 }
 ]
 
 // 友链数据
@@ -656,7 +668,7 @@ export const links = [
 // 个人简介
 export const profile = {
   name: '墨韵',
-  avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80',
+  avatar: 'https://t.mwm.moe/lai',//'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80',
   bio: '一个热爱文学与技术的追梦人，在代码与诗篇之间寻找平衡。喜欢用文字记录生活，用镜头捕捉美好，用代码构建世界。',
   email: 'contact@example.com',
   github: 'https://github.com',
@@ -669,5 +681,5 @@ export const siteInfo = {
   name: '墨韵博客',
   slogan: '简约而不简单，文艺而不矫情',
   description: '这是一个个人文学创作与技术分享的空间，记录生活中的点滴感悟，分享技术路上的所学所获。',
-  founded: '2023年'
+  founded: '2026年'
 }

@@ -1,7 +1,5 @@
 <template>
   <div class="about-view container mx-auto px-4 py-8">
-    <BreadCrumb :items="[{ name: '关于本站' }]" />
-
     <div class="max-w-4xl mx-auto">
       <!-- Profile Section -->
       <div class="glass rounded-xl p-8 mb-8 text-center wow fadeInUp">
@@ -75,7 +73,8 @@ import { computed, onMounted } from 'vue'
 import { NTag, NIcon } from 'naive-ui'
 import { InformationCircle, CodeSlash, LogoVue, LogoJavascript, Terminal } from '@vicons/ionicons5'
 import { profile, siteInfo, siteStats } from '@/data/mockData'
-import BreadCrumb from '@/components/common/BreadCrumb.vue'
+import { useWow } from '@/composables/useWow'
+useWow() // 直接调用即可
 
 const statItems = computed(() => [
   { label: '文章', value: siteStats.articles },
@@ -94,8 +93,6 @@ const skills = [
 ]
 
 onMounted(() => {
-  if (window.WOW) {
-    new WOW({ mobile: true, live: false }).init()
-  }
+
 })
 </script>

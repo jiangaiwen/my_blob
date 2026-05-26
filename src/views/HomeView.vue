@@ -27,7 +27,7 @@
         <!-- Sidebar -->
         <aside class="w-full lg:w-80 flex-shrink-0">
           <div class="sticky top-24">
-            <Sidebar class="wow fadeInLeft" />
+            <Sidebar class="wow animate__fadeInUp" data-wow-delay="0.1s" />
           </div>
         </aside>
 
@@ -35,10 +35,10 @@
         <main class="flex-1">
           <!-- Header Section -->
           <div class="mb-8 text-center lg:text-left">
-            <h1 class="text-3xl md:text-4xl font-bold mb-4 wow fadeIn">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">
               <span class="gradient-text">欢迎来到墨韵博客</span>
             </h1>
-            <p class="text-lg wow fadeInUp" style="color: var(--text-secondary);animation-delay: 0.1s">
+            <p class="text-lg" style="color: var(--text-secondary);">
               在文字与代码之间，寻找生活的诗意
             </p>
           </div>
@@ -59,8 +59,7 @@
                 v-for="(article, index) in latestArticles"
                 :key="article.id"
                 :article="article"
-                class="wow fadeInUp"
-                :style="{ animationDelay: `${index * 0.1}s` }"
+                class="wow animate__fadeInUp" :data-wow-delay="`${index * 0.1}s`"
               />
             </div>
           </section>
@@ -122,6 +121,8 @@ import { articles } from '@/data/mockData'
 import { useAppStore } from '@/stores/app'
 import Sidebar from '@/components/common/Sidebar.vue'
 import ArticleCard from '@/components/common/ArticleCard.vue'
+import { useWow } from '@/composables/useWow'
+useWow() // 直接调用即可
 
 const router = useRouter()
 const appStore = useAppStore()
@@ -142,9 +143,7 @@ const handleImageError = () => {
 }
 
 onMounted(() => {
-  if (window.WOW) {
-    new WOW({ mobile: true, live: false }).init()
-  }
+  
 })
 </script>
 

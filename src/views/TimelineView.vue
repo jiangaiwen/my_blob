@@ -1,7 +1,5 @@
 <template>
   <div class="timeline-view container mx-auto px-4 py-8">
-    <BreadCrumb :items="[{ name: '时间线' }]" />
-
     <!-- Header -->
     <div class="text-center mb-12">
       <h1 class="text-3xl font-bold mb-4 wow fadeIn">
@@ -55,7 +53,8 @@
 import { computed, onMounted } from 'vue'
 import { NTag } from 'naive-ui'
 import { articles } from '@/data/mockData'
-import BreadCrumb from '@/components/common/BreadCrumb.vue'
+import { useWow } from '@/composables/useWow'
+useWow() // 直接调用即可
 
 const timelineItems = computed(() => {
   return [...articles]
@@ -71,9 +70,7 @@ const timelineItems = computed(() => {
 })
 
 onMounted(() => {
-  if (window.WOW) {
-    new WOW({ mobile: true, live: false }).init()
-  }
+
 })
 </script>
 

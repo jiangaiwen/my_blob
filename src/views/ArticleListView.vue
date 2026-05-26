@@ -1,7 +1,5 @@
 <template>
   <div class="article-list-view container mx-auto px-4 py-8">
-    <BreadCrumb :items="[{ name: '文章列表' }]" />
-
     <!-- Header -->
     <div class="text-center mb-8">
       <h1 class="text-3xl font-bold mb-4 wow fadeIn">
@@ -86,7 +84,8 @@ import { NTag, NDivider, NPagination, NIcon } from 'naive-ui'
 import { DocumentTextOutline } from '@vicons/ionicons5'
 import { articles, categories, tags } from '@/data/mockData'
 import ArticleCard from '@/components/common/ArticleCard.vue'
-import BreadCrumb from '@/components/common/BreadCrumb.vue'
+import { useWow } from '@/composables/useWow'
+useWow() // 直接调用即可
 
 const currentPage = ref(1)
 const pageSize = 9

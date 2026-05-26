@@ -1,5 +1,8 @@
 <template>
-  <header class="fixed top-0 left-0 right-0 z-50 glass">
+  <header 
+    class="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+    :class="isGuestbook ? 'bg-transparent guestbook-nav' : 'glass'"
+  >
     <nav class="container mx-auto px-4 h-16 flex items-center justify-between">
       <!-- Logo -->
       <router-link to="/" class="flex items-center gap-2">
@@ -23,7 +26,6 @@
 
       <!-- Right Actions -->
       <div class="flex items-center gap-4">
-        <ThemeToggle />
         <n-button v-if="isMobile" text @click="showDrawer = true">
           <template #icon>
             <n-icon><MenuOutline /></n-icon>
@@ -53,17 +55,17 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, inject } from 'vue'
 import { NGradientText, NButton, NIcon, NDrawer, NDrawerContent } from 'naive-ui'
 import { MenuOutline } from '@vicons/ionicons5'
 import { useThemeStore } from '@/stores/theme'
-import ThemeToggle from './ThemeToggle.vue'
 
 const themeStore = useThemeStore()
 const isDark = computed(() => themeStore.isDark)
 
 const showDrawer = ref(false)
 const isMobile = ref(false)
+const isGuestbook = inject('isGuestbook', false)
 
 const navItems = [
   { name: '首页', path: '/' },
@@ -86,6 +88,15 @@ window.addEventListener('resize', checkMobile)
 <style scoped>
 .nav-link {
   color: var(--text-secondary);
+}
+
+:deep(.guestbook-nav) .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+:deep(.guestbook-nav) .nav-link:hover,
+:deep(.guestbook-nav) .nav-link.router-link-active {
+  color: #fff;
 }
 
 .nav-link:hover,

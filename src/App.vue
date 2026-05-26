@@ -12,6 +12,7 @@
             </router-view>
           </main>
           <AppFooter />
+          <AppSetting />
           <BackToTop />
         </div>
       </n-dialog-provider>
@@ -27,6 +28,7 @@ import { useAppStore } from './stores/app'
 import AppHeader from './components/common/AppHeader.vue'
 import AppFooter from './components/common/AppFooter.vue'
 import BackToTop from './components/common/BackToTop.vue'
+import AppSetting from './components/common/AppSetting.vue'
 
 const themeStore = useThemeStore()
 const appStore = useAppStore()
